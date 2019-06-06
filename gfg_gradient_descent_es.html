@@ -804,8 +804,8 @@ Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si us
 <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/gdp.png" alt="gd_path" height="350" width="350" /></p>
 <p>Camino tomado por Descenso Estocástico &#8211;<br />
 <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/sgd-1.jpg" alt="sgd_path" height="350" width="350" /></p>
-<p>Algo a notar es que como DGE es generalmente mas ruidoso que Descenso de Gradientes típico le suele tomar un numero de iteraciones mayor para llegar a los mínimos debido a la naturaleza aleatoria de su descenso. Aunque le toma un mayor número de iteraciones llegar a los mínimos que el Descenso de Gradientes típico, aun así, suele ser computacionalmente mucho menos costoso.</p>
-<p>Pseudo code for SGD in Python:</p>
+<p>Cabe mencionar que como DGE es generalmente mas ruidoso que Descenso de Gradientes típico le suele tomar un numero de iteraciones mayor para llegar a los mínimos debido a la naturaleza aleatoria de su descenso. Aunque le toma un mayor número de iteraciones llegar a los mínimos que el Descenso de Gradientes típico, aun así, suele ser computacionalmente mucho menos costoso. Por lo tanto, en la mayoría de los escenarios se suele preferir DGE sobre Descenso de Gradientes por Lotes para optimizar un algoritmo de aprendizaje.</p>
+<p>Pseudocódigo para DGE en Python:</p>
 <div class="noIdeBtnDiv">
 <div class="code-block">
 <div class="code-gutter">
@@ -833,23 +833,23 @@ Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si us
 <tr>
 <td class="code">
 <div class="container">
-<div class="line number1 index0 alt2"><code class="keyword">def</code> <code class="plain">SGD(f, theta0, alpha, num_iters): </code></div>
+<div class="line number1 index0 alt2"><code class="keyword">def</code> <code class="plain">DGE(f, theta0, alpha, num_iters): </code></div>
 <div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">"""&nbsp; </code></div>
-<div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">Arguments: </code></div>
-<div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">f -- the function to optimize, it takes a single argument </code></div>
-<div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">and yield two outputs, a cost and the gradient </code></div>
-<div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">with respect to the arguments </code></div>
-<div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">theta0 -- the initial point to start SGD from </code></div>
-<div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">num_iters -- total iterations to run SGD for </code></div>
-<div class="line number9 index8 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">Return: </code></div>
-<div class="line number10 index9 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">theta -- the parameter value after SGD finishes </code></div>
+<div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">Argumentos: </code></div>
+<div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">f -- la funcion a optimizar, toma solo un argumento </code></div>
+<div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">y regresa dos valores, un costo y el gradiente </code></div>
+<div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">con respecto a los argumentos </code></div>
+<div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">theta0 -- el punto inicial para comenzar DGE </code></div>
+<div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">num_iters -- el numero de iteraciones a correr para DGE </code></div>
+<div class="line number9 index8 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">Regresa: </code></div>
+<div class="line number10 index9 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">theta -- el valor del parametro theta terminado el DGE </code></div>
 <div class="line number11 index10 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">"""</code></div>
-<div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">start_iter </code><code class="keyword">=</code> <code class="value">0</code></div>
+<div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">iter_inicial </code><code class="keyword">=</code> <code class="value">0</code></div>
 <div class="line number13 index12 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">theta </code><code class="keyword">=</code> <code class="plain">theta0 </code></div>
-<div class="line number14 index13 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">for</code> <code class="functions">iter</code> <code class="keyword">in</code> <code class="functions">xrange</code><code class="plain">(start_iter </code><code class="keyword">+</code> <code class="value">1</code><code class="plain">, num_iters </code><code class="keyword">+</code> <code class="value">1</code><code class="plain">): </code></div>
+<div class="line number14 index13 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">for</code> <code class="functions">iter</code> <code class="keyword">in</code> <code class="functions">xrange</code><code class="plain">(iter_inicial </code><code class="keyword">+</code> <code class="value">1</code><code class="plain">, num_iters </code><code class="keyword">+</code> <code class="value">1</code><code class="plain">): </code></div>
 <div class="line number15 index14 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">_, grad </code><code class="keyword">=</code> <code class="plain">f(theta) </code></div>
 <div class="line number16 index15 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code>&nbsp;</div>
-<div class="line number17 index16 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments"># there is NO dot product ! return theta </code></div>
+<div class="line number17 index16 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments"># NO hay producto punto ! regresa theta </code></div>
 <div class="line number18 index17 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">theta </code><code class="keyword">=</code> <code class="plain">theta </code><code class="keyword">-</code> <code class="plain">(alpha </code><code class="keyword">*</code> <code class="plain">grad)&nbsp; </code></div>
 </div>
 </td>
@@ -870,7 +870,7 @@ Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si us
 </p></div>
 </p></div>
 </p></div>
-<p>This cycle of taking the values and adjusting them based on different parameters in order to reduce the loss function is called <b>back-propagation</b>.</p>
+<p>Este ciclo de tomar los valores y ajustarlos basados en diferentes parámetros para reducir la funcion de pérdida se llama <b>retroprogapación (back-propagation)</b>.</p>
 <p><a target="_blank" href="https://practice.geeksforgeeks.org/courses/dsa-online-2"><img style="box-shadow:none;margin-top:15px" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190513120355/article.png"></a></p>
 <br/><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- post_bottom_responsive -->
