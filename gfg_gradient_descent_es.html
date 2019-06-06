@@ -759,9 +759,9 @@ var bsa = document.createElement('script');
 
 				<div class="entry-content">
 			<p><b>¿Qué es el Descenso de Gradientes?</b><br />
-Antes de hablar del Descenso de Gradientes Estocástico (DGE), primero debemos comprender el Descenso de Gradientes. El descenso de gradientes es una técnica de optimización muy popular en el área de Machine Learning y Deep Learning y puede utilizarse con la mayoría (si no es que todos) los algoritmos de aprendizaje. Un gradiente es básicamente la pendiente de una función, o bien, la magnitud de cambio de un parámetro con respecto al cambio en otro parámetro. Matemáticamente, se puede describir como las derivadas parciales de un conjunto de parámetros con respecto  a sus entrads. A mayor gradiente, mayor inclinación de la pendiente. El Descenso de Gradientes es una función convexa.<br />
-Por cierto, en ocasiones se traduce Machine Learning como Aprendizaje de Máquina o Aprendizaje Automático pero es más común usar el nombre en inglés o sus siglas ML. Asimismo, Deep Learning se puede encontrar como Aprendizaje Profundo, pero en este artículo lo usaremos así o con sus siglas DL por ser así como generalmente se encuentra en cada vez más artículos recientes.<br />
-El Descenso de Gradientes puede ser descrito como un método iterativo que se usa para encontrar los valores los parámetros de una función que minimiza la función de costo lo más posible. Inicialmente se asignan valores particulares a los parametros y a partir de ese punto se corre el algoritmo de Descenso de Gradientes de manera iterativa para encontrar los valores óptimos para los parametros usando Cálculo para encontrar el menor valor posible de la función de costo utilizada.</p>
+Antes de hablar de Descenso de Gradientes Estocástico (DGE), primero debemos comprender el Descenso de Gradientes. El descenso de gradientes es una técnica de optimización muy popular en el área de Machine Learning y Deep Learning y puede utilizarse con la mayoría (si no es que todos) los algoritmos de aprendizaje. Un gradiente es básicamente la pendiente de una función, o bien, la magnitud de cambio de un parámetro con respecto al cambio en otro parámetro. Matemáticamente, se puede describir como las derivadas parciales de un conjunto de parámetros con respecto  a sus entradas. A mayor gradiente, mayor inclinación de la pendiente. El Descenso de Gradientes es una función convexa.<br />
+Por cierto, en ocasiones se traduce Machine Learning como Aprendizaje de Máquina o Aprendizaje Automático pero es más común usar el nombre en inglés o sus siglas ML. Asimismo, Deep Learning se puede encontrar como Aprendizaje Profundo, pero en este artículo lo usaremos así o con sus siglas DL por ser así como generalmente se encuentra en cada vez más artículos.<br />
+El Descenso de Gradientes puede ser descrito como un método iterativo que se usa para encontrar los valores de los parámetros de una función que minimiza la función de costo lo mejor posible. Inicialmente se asignan valores particulares a los parámetros y a partir de ese punto se usa el algoritmo de Descenso de Gradientes de manera iterativa para encontrar sus valores óptimos usando herramientas de Cálculo para encontrar el menor valor posible de la función de costo utilizada.</p>
 
 <p><b>Tipos de Descenso de Gradientes</b><br />
 Por lo general se consideran tres tipos de Descenso de Gradientes:</p>
@@ -773,17 +773,17 @@ Por lo general se consideran tres tipos de Descenso de Gradientes:</p>
 <p>En este artículo discutiremos el Descenso de Gradientes Estocástico o DGE.</p>
 <h3>Descenso de Gradientes Estocástico (DGE)</h3>
 <p>
-La palabra &#8216;<em>estocástico</em>&#8216; se refiere a un sistema o proceso que esta vinculado a una probabilidad aleatoria. Por lo tanto, en Descenso de Gradientes Estocástico se toman algunas muestras de manera aleatoria para cada iteración en lugar de todo el conjunto de datos. 
+La palabra &#8216;<em>estocástico</em>&#8216; se refiere a un sistema o proceso que está vinculado a una probabilidad aleatoria. Por lo tanto, en Descenso de Gradientes Estocástico se toman algunas muestras de manera aleatoria para cada iteración en lugar de todo el conjunto de datos. 
 
-En Descenso de Gradientes existe un término llamado &#8220;lotes (batch)&#8221; que se refiere al número totoal de muestras del conjunto de datos que se usa para calcular el gradiente para cada iteración. 
+En Descenso de Gradientes existe un término llamado &#8220;lotes&#8221; (batch) que se refiere al número total de muestras del conjunto de datos que se usa para calcular el gradiente para cada iteración. 
 
-En la optimización de Descenso por Gradientes tradicional el lote se toma sobre todos los datos, así como en en Descenso de Gradientes por Lotes. 
+En la optimización de Descenso por Gradientes tradicional el lote se toma sobre todos los datos, así como en Descenso de Gradientes por Lotes. 
 
-Aunque usar todos los datos disponibles es sumamente útil para encontrar los mínimos del sistema de una manera menos aleatoria o ruidosa, el problema surge cuando tenemos una enorme cantidad de datos.<br />
+Aunque usar todos los datos disponibles es sumamente útil para encontrar los mínimos de un sistema de una manera menos aleatoria o ruidosa, el problema surge cuando tenemos una enorme cantidad de datos.<br />
 
-Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si usaramos una técnica de optimización típica de Descenso de Gradientes tendríamos que usar todas y cada una del millón de muestras para completar una sola iteración mientras se realiza el Descenso de Gradientes. Además, esto deberá hacerse para cada iteración hasta que se haya encontrado los mínimos. Por lo tanto, esto se vuelve extremadamente costoso de realizar.</p>
+Supongamos que tenemos un millón de muestras en nuestro conjunto de datos, si usáramos una técnica de optimización típica de Descenso de Gradientes tendríamos que usar todas y cada una del millón de muestras para completar una sola iteración mientras se realiza el Descenso de Gradientes. Además, esto deberá hacerse para cada iteración hasta que se haya encontrado los mínimos. Por lo tanto, esto se vuelve extremadamente costoso de realizar.</p>
 
-<p>Este problema se puede resolver con el uso de Descenso de Gradientes Estocástico. En DGE, se utiliza únicamente una muestra, es decir, un lote de tamaño igual a 1, para cada iteración. La muestra se revuelve y selecciona de manera aleatoria para cada realizar cada iteración.</p><br/>
+<p>Este problema se puede resolver con el uso de Descenso de Gradientes Estocástico. En DGE, se utiliza únicamente una muestra, es decir, un lote de tamaño igual a 1, para cada iteración. La muestra se "barajea" y selecciona de manera aleatoria para cada realizar cada iteración.</p><br/>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- post_top_responsive -->
           <ins class="adsbygoogle"
@@ -799,12 +799,12 @@ Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si us
 <p><b>Algoritmo DGE:</b></p>
 <p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/sgdn.png" alt="sgdns" /></p>
 <p>Entonces, en DGE, encontramos el gradiente de la función de costo de un solo ejemplo en cada iteración en lugar de la suma del gradiente de la función de costo de todos los ejemplos.</p>
-<p>En DGE, como seleccionamos al azar únicamente una muestra de todos los datos para cada iteración, el camino tomado por el algoritmo para llegar a los mínimos suele ser mucho mas ruidoso que el del Descenso de Gradientes típico. No obstante, eso no importa tanto porque el camino tomado por el algoritmo no es importante, siempre y cuando lleguemos a los mínimos y con un tiempo de entrenamiento significativamente menor.</p>
+<p>En DGE, como seleccionamos al azar únicamente una muestra de todos los datos para cada iteración, el camino tomado por el algoritmo para llegar a los mínimos suele ser mucho más ruidoso que el de Descenso de Gradientes típico. No obstante, eso no importa tanto porque el camino tomado por el algoritmo no es importante, siempre y cuando lleguemos a los mínimos y con un tiempo de entrenamiento significativamente menor.</p>
 <p>Camino tomado por Descenso de Gradientes por Lotes &#8211;<br />
 <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/gdp.png" alt="gd_path" height="350" width="350" /></p>
 <p>Camino tomado por Descenso Estocástico &#8211;<br />
 <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/sgd-1.jpg" alt="sgd_path" height="350" width="350" /></p>
-<p>Cabe mencionar que como DGE es generalmente mas ruidoso que Descenso de Gradientes típico le suele tomar un numero de iteraciones mayor para llegar a los mínimos debido a la naturaleza aleatoria de su descenso. Aunque le toma un mayor número de iteraciones llegar a los mínimos que el Descenso de Gradientes típico, aun así, suele ser computacionalmente mucho menos costoso. Por lo tanto, en la mayoría de los escenarios se suele preferir DGE sobre Descenso de Gradientes por Lotes para optimizar un algoritmo de aprendizaje.</p>
+<p>Cabe mencionar que como DGE es generalmente más ruidoso que Descenso de Gradientes típico le suele tomar un número de iteraciones mayor para llegar a los mínimos debido a la naturaleza aleatoria de su descenso. No obstante, aunque le toma un mayor número de iteraciones llegar a los mínimos que el Descenso de Gradientes típico, aun así, suele ser computacionalmente mucho menos costoso. Por lo tanto, en la mayoría de los escenarios se suele preferir DGE sobre Descenso de Gradientes por Lotes para optimizar un algoritmo de aprendizaje.</p>
 <p>Pseudocódigo para DGE en Python:</p>
 <div class="noIdeBtnDiv">
 <div class="code-block">
@@ -870,7 +870,7 @@ Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si us
 </p></div>
 </p></div>
 </p></div>
-<p>Este ciclo de tomar los valores y ajustarlos basados en diferentes parámetros para reducir la funcion de pérdida se llama <b>retroprogapación (back-propagation)</b>.</p>
+<p>Este ciclo de tomar los valores y ajustarlos basados en diferentes parámetros para reducir la función de pérdida se llama <b>retropropagación (back-propagation)</b>.</p>
 <p><a target="_blank" href="https://practice.geeksforgeeks.org/courses/dsa-online-2"><img style="box-shadow:none;margin-top:15px" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190513120355/article.png"></a></p>
 <br/><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- post_bottom_responsive -->
