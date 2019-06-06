@@ -759,7 +759,7 @@ var bsa = document.createElement('script');
 
 				<div class="entry-content">
 			<p><b>¿Qué es el Descenso de Gradientes?</b><br />
-Antes de hablar del Descenso de Gradientes Estocástico (DGE), primero debemos comprender el Descenso de Gradientes. El descenso de gradientes es una técnica de optimización muy popular en el área de Machine Learning y Deep Learning y puede utilizarse con la mayoría (si no es que todos) los algoritmos de aprendizaje. Un gradiente es básicamente la pendiente de una funcion, o bien, la magnitud de cambio de un parámetro con respecto al cambio en otro parámetro. Matemáticamente, se puede describir como las derivadas parciales de un conjunto de parámetros con respecto  a sus entrads. A mayor gradiente, mayor inclinación de la pendiente. El Descenso de Gradientes es una función convexa.<br />
+Antes de hablar del Descenso de Gradientes Estocástico (DGE), primero debemos comprender el Descenso de Gradientes. El descenso de gradientes es una técnica de optimización muy popular en el área de Machine Learning y Deep Learning y puede utilizarse con la mayoría (si no es que todos) los algoritmos de aprendizaje. Un gradiente es básicamente la pendiente de una función, o bien, la magnitud de cambio de un parámetro con respecto al cambio en otro parámetro. Matemáticamente, se puede describir como las derivadas parciales de un conjunto de parámetros con respecto  a sus entrads. A mayor gradiente, mayor inclinación de la pendiente. El Descenso de Gradientes es una función convexa.<br />
 Por cierto, en ocasiones se traduce Machine Learning como Aprendizaje de Máquina o Aprendizaje Automático pero es más común usar el nombre en inglés o sus siglas ML. Asimismo, Deep Learning se puede encontrar como Aprendizaje Profundo, pero en este artículo lo usaremos así o con sus siglas DL por ser así como generalmente se encuentra en cada vez más artículos recientes.<br />
 El Descenso de Gradientes puede ser descrito como un método iterativo que se usa para encontrar los valores los parámetros de una función que minimiza la función de costo lo más posible. Inicialmente se asignan valores particulares a los parametros y a partir de ese punto se corre el algoritmo de Descenso de Gradientes de manera iterativa para encontrar los valores óptimos para los parametros usando Cálculo para encontrar el menor valor posible de la función de costo utilizada.</p>
 
@@ -783,7 +783,7 @@ Aunque usar todos los datos disponibles es sumamente útil para encontrar los m�
 
 Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si usaramos una técnica de optimización típica de Descenso de Gradientes tendríamos que usar todas y cada una del millón de muestras para completar una sola iteración mientras se realiza el Descenso de Gradientes. Además, esto deberá hacerse para cada iteración hasta que se haya encontrado los mínimos. Por lo tanto, esto se vuelve extremadamente costoso de realizar.</p>
 
-<p>This problem is solved by Stochastic Gradient Descent. In SGD, it uses only a single sample, i.e., a batch size of one, to perform each iteration. The sample is randomly shuffled and selected for performing the iteration.</p><br/>
+<p>Este problema se puede resolver con el uso de Descenso de Gradientes Estocástico. En DGE, se utiliza únicamente una muestra, es decir, un lote de tamaño igual a 1, para cada iteración. La muestra se revuelve y selecciona de manera aleatoria para cada realizar cada iteración.</p><br/>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- post_top_responsive -->
           <ins class="adsbygoogle"
@@ -796,15 +796,15 @@ Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si us
         </script>
         <br/>
             
-<p><b>SGD algorithm:</b></p>
+<p><b>Algoritmo DGE:</b></p>
 <p><img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/sgdn.png" alt="sgdns" /></p>
-<p>So, in SGD, we find out the gradient of the cost function of a single example at each iteration instead of the sum of the gradient of the cost function of all the examples.</p>
-<p>In SGD, since only one sample from the dataset is chosen at random for each iteration, the path taken by the algorithm to reach the minima is usually noisier than your typical Gradient Descent algorithm. But that doesn&#8217;t matter all that much because the path taken by the algorithm does not matter, as long as we reach the minima and with significantly shorter training time.</p>
-<p>Path taken by Batch Gradient Descent &#8211;<br />
+<p>Entonces, en DGE, encontramos el gradiente de la función de costo de un solo ejemplo en cada iteración en lugar de la suma del gradiente de la función de costo de todos los ejemplos.</p>
+<p>En DGE, como seleccionamos al azar únicamente una muestra de todos los datos para cada iteración, el camino tomado por el algoritmo para llegar a los mínimos suele ser mucho mas ruidoso que el del Descenso de Gradientes típico. No obstante, eso no importa tanto porque el camino tomado por el algoritmo no es importante, siempre y cuando lleguemos a los mínimos y con un tiempo de entrenamiento significativamente menor.</p>
+<p>Camino tomado por Descenso de Gradientes por Lotes &#8211;<br />
 <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/gdp.png" alt="gd_path" height="350" width="350" /></p>
-<p>Path taken by Stochastic Gradient Descent &#8211;<br />
+<p>Camino tomado por Descenso Estocástico &#8211;<br />
 <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/sgd-1.jpg" alt="sgd_path" height="350" width="350" /></p>
-<p>One thing to be noted is that, as SGD is generally noisier than typical Gradient Descent, it usually took a higher number of iterations to reach the minima, because of its randomness in its descent. Even though it requires a higher number of iterations to reach the minima than typical Gradient Descent, it is still computationally much less expensive than typical Gradient Descent. Hence, in most scenarios, SGD is preferred over Batch Gradient Descent for optimizing a learning algorithm.</p>
+<p>Algo a notar es que como DGE es generalmente mas ruidoso que Descenso de Gradientes típico le suele tomar un numero de iteraciones mayor para llegar a los mínimos debido a la naturaleza aleatoria de su descenso. Aunque le toma un mayor número de iteraciones llegar a los mínimos que el Descenso de Gradientes típico, aun así, suele ser computacionalmente mucho menos costoso.</p>
 <p>Pseudo code for SGD in Python:</p>
 <div class="noIdeBtnDiv">
 <div class="code-block">
