@@ -753,27 +753,36 @@ var bsa = document.createElement('script');
 		<div id="content" role="main">
                         							 	<article id="post-276668" class="post-276668 post type-post status-publish format-standard hentry category-advanced-computer-subject category-machine-learning">
 				<header class="entry-header">
-						<h1 class="entry-title">ML | Stochastic Gradient Descent (SGD)</h1>
+					<h1 class="entry-title">ML | Descenso de Gradientes Estocástico (DGS)</h1>
 				
 						</header><!-- .entry-header -->
 
 				<div class="entry-content">
 			<p><b>¿Qué es el Descenso de Gradientes?</b><br />
 Antes de hablar del Descenso de Gradientes Estocástico (DGE), primero debemos comprender el Descenso de Gradientes. El descenso de gradientes es una técnica de optimización muy popular en el área de Machine Learning y Deep Learning y puede utilizarse con la mayoría (si no es que todos) los algoritmos de aprendizaje. Un gradiente es básicamente la pendiente de una funcion, o bien, la magnitud de cambio de un parámetro con respecto al cambio en otro parámetro. Matemáticamente, se puede describir como las derivadas parciales de un conjunto de parámetros con respecto  a sus entrads. A mayor gradiente, mayor inclinación de la pendiente. El Descenso de Gradientes es una función convexa.<br />
-Por cierto, en ocasiones se traduce Machine Learning como Aprendizaje de Máquina o Aprendizaje Automático pero es más común usar el nombre en inglés o sus siglas ML. Asimismo, Deep Learning se puede encontrar como Aprendizaje Profundo, pero en este artículo lo usaremos así o con sus siglas DL por ser así como generalmente se encuentra en cada vez más artículos recientes.
+Por cierto, en ocasiones se traduce Machine Learning como Aprendizaje de Máquina o Aprendizaje Automático pero es más común usar el nombre en inglés o sus siglas ML. Asimismo, Deep Learning se puede encontrar como Aprendizaje Profundo, pero en este artículo lo usaremos así o con sus siglas DL por ser así como generalmente se encuentra en cada vez más artículos recientes.<br />
 El Descenso de Gradientes puede ser descrito como un método iterativo que se usa para encontrar los valores los parámetros de una función que minimiza la función de costo lo más posible. Inicialmente se asignan valores particulares a los parametros y a partir de ese punto se corre el algoritmo de Descenso de Gradientes de manera iterativa para encontrar los valores óptimos para los parametros usando Cálculo para encontrar el menor valor posible de la función de costo utilizada.</p>
 
-<p><b>Types of Gradient Descent:</b><br />
-Typically, there are three types of Gradient Descent:</p>
+<p><b>Tipos de Descenso de Gradientes</b><br />
+Por lo general se consideran tres tipos de Descenso de Gradientes:</p>
 <ol>
-<li>Batch Gradient Descent</li>
-<li>Stochastic Gradient Descent</li>
-<li>Mini-batch Gradient Descent</li>
+<li>Descenso de Gradiente por Lotes</li>
+<li>Descenso de Gradiente Estocástico</li>
+<li>Descenso de Gradiente por Mini-Lotes</li>
 </ol>
-<p>In this article, we will be discussing <b>Stochastic Gradient Descent</b> or SGD.</p>
-<h3>Stochastic Gradient Descent (SGD):</h3>
-<p>The word &#8216;<em>stochastic</em>&#8216; means a system or a process that is linked with a random probability. Hence, in Stochastic Gradient Descent, a few samples are selected randomly instead of the whole data set for each iteration. In Gradient Descent, there is a term called &#8220;batch&#8221; which denotes the total number of samples from a dataset that is used for calculating the gradient for each iteration. In typical Gradient Descent optimization, like Batch Gradient Descent, the batch is taken to be the whole dataset. Although, using the whole dataset is really useful for getting to the minima in a less noisy or less random manner, but the problem arises when our datasets get really huge.<br />
-Suppose, you have a million samples in your dataset, so if you use a typical Gradient Descent optimization technique, you will have to use all of the one million samples for completing one iteration while performing the Gradient Descent, and it has to be done for every iteration until the minima is reached. Hence, it becomes computationally very expensive to perform.</p>
+<p>En este artículo discutiremos el Descenso de Gradientes Estocástico o DGE.</p>
+<h3>Descenso de Gradientes Estocástico (DGE)</h3>
+<p>
+La palabra &#8216;<em>estocástico</em>&#8216; se refiere a un sistema o proceso que esta vinculado a una probabilidad aleatoria. Por lo tanto, en Descenso de Gradientes Estocástico se toman algunas muestras de manera aleatoria para cada iteración en lugar de todo el conjunto de datos. 
+
+En Descenso de Gradientes existe un término llamado &#8220;lotes (batch)&#8221; que se refiere al número totoal de muestras del conjunto de datos que se usa para calcular el gradiente para cada iteración. 
+
+En la optimización de Descenso por Gradientes tradicional el lote se toma sobre todos los datos, así como en en Descenso de Gradientes por Lotes. 
+
+Aunque usar todos los datos disponibles es sumamente útil para encontrar los mínimos del sistema de una manera menos aleatoria o ruidosa, el problema surge cuando tenemos una enorme cantidad de datos.<br />
+
+Supongamos que tenemos un millon de muestras en nuestro conjunto de datos, si usaramos una técnica de optimización típica de Descenso de Gradientes tendríamos que usar todas y cada una del millón de muestras para completar una sola iteración mientras se realiza el Descenso de Gradientes. Además, esto deberá hacerse para cada iteración hasta que se haya encontrado los mínimos. Por lo tanto, esto se vuelve extremadamente costoso de realizar.</p>
+
 <p>This problem is solved by Stochastic Gradient Descent. In SGD, it uses only a single sample, i.e., a batch size of one, to perform each iteration. The sample is randomly shuffled and selected for performing the iteration.</p><br/>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- post_top_responsive -->
