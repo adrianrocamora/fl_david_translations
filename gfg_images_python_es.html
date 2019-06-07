@@ -763,7 +763,7 @@ var bsa = document.createElement('script');
 						</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>PIL es la Librería de Imágenes de Python que le brinda la habilidad de editar imágenes al intérprete de Python. Fue desarrollado por Fredrik Lundh y otros contribuyentes. Pillow es un fork más amigable de PIL y es una librería fácil de usar desarrollada por Alex Clark y otros contribuyentes. En este artículo trabajaremos con Pillow.</p>
+			<p>PIL es la Librería de Imágenes de Python que le brinda la habilidad de editar imágenes al intérprete de Python. Fue desarrollada por Fredrik Lundh y otros contribuyentes. Pillow es un fork más amigable de PIL y es una librería fácil de usar desarrollada por Alex Clark y otros contribuyentes. En este artículo trabajaremos con Pillow.</p>
 <p><strong>Instalación:</strong></p>
 <ul>
 <li><strong>Linux:</strong> En una terminal de Linux escribe lo siguiente:
@@ -818,14 +818,14 @@ sudo apt-get install python-pip</pre>
 <td class="code">
 <div class="container">
 <div class="line number1 index0 alt2"><code class="comments">#img&nbsp; = Image.open(path)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div>
-<div class="line number2 index1 alt1"><code class="comments"># Si esta linea corre exitosamente, </code></div>
-<div class="line number3 index2 alt2"><code class="comments"># regresa un objeto de tip Image y lo guarda en la variable img </code></div>
+<div class="line number2 index1 alt1"><code class="comments"># Si esta linea corre exitosamente, regresa un objecto</code></div>
+<div class="line number3 index2 alt2"><code class="comments"># de tipo Image y lo guarda en la variable img </code></div>
 <div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code>&nbsp;</div>
 <div class="line number5 index4 alt2"><code class="keyword">try</code><code class="plain">:&nbsp; </code></div>
 <div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">img&nbsp; </code><code class="keyword">=</code> <code class="plain">Image.</code><code class="functions">open</code><code class="plain">(path)&nbsp; </code></div>
 <div class="line number7 index6 alt2"><code class="keyword">except</code> <code class="plain">IOError: </code></div>
 <div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">pass</code></div>
-<div class="line number9 index8 alt2"><code class="comments"># Usa la línea anterior dentro de un bloque try porque&nbsp; </code></div>
+<div class="line number9 index8 alt2"><code class="comments"># Usa la linea anterior dentro de un bloque try porque&nbsp; </code></div>
 <div class="line number10 index9 alt1"><code class="comments"># puede arrojar un IOError si no puede encontrar el archivo,&nbsp; </code></div>
 <div class="line number11 index10 alt2"><code class="comments"># o si la imagen no se puede abrir.</code></div>
 </div>
@@ -847,7 +847,7 @@ sudo apt-get install python-pip</pre>
 </p></div>
 </p></div>
 </li>
-<li><strong>Regresa el tamaño de una imagen</strong>: Las instancias de la clase Image tienen muchos atributos, uno de los más útiles es size.
+<li><strong>Regresa el tamaño de una imagen</strong>: Las instancias de la clase Image tienen muchos atributos, uno de los más útiles es size que sirve para saber el tamaño de la imagen.
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
@@ -876,7 +876,7 @@ sudo apt-get install python-pip</pre>
 <div class="container">
 <div class="line number1 index0 alt2"><code class="keyword">from</code> <code class="plain">PIL </code><code class="keyword">import</code> <code class="plain">Image </code></div>
 <div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
-<div class="line number3 index2 alt2"><code class="plain">filename </code><code class="keyword">=</code> <code class="string">"image.png"</code></div>
+<div class="line number3 index2 alt2"><code class="plain">filename </code><code class="keyword">=</code> <code class="string">"dibujo.png"</code></div>
 <div class="line number4 index3 alt1"><code class="plain">with Image.</code><code class="functions">open</code><code class="plain">(filename) as image: </code></div>
 <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">width, height </code><code class="keyword">=</code> <code class="plain">image.size </code></div>
 <div class="line number6 index5 alt1"><code class="comments">#Image.size nos da una 2-tupla con el ancho y la altura de la imagen </code></div>
@@ -899,7 +899,7 @@ sudo apt-get install python-pip</pre>
 </p></div>
 </p></div>
 <p>Otros atributos son: Image.width, Image.height, Image.format, Image.info, etc.</li>
-<li><strong>Salvar cambios a una imagen: </strong>Para guardar cualquier cambio hecho al archivo de imagen, necesitamos proporcionar la ruta y el formato de la imagen.
+<li><strong>Guardar cambios a una imagen: </strong>Para guardar cualquier cambio hecho al archivo de imagen, necesitamos proporcionar la ruta y el formato de la imagen.
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
@@ -1011,7 +1011,7 @@ sudo apt-get install python-pip</pre>
 </p></div>
 </p></div>
 <p><a href="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/rotating-an-image-in-python.png"><img class="aligncenter size-full wp-image-158654" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/rotating-an-image-in-python.png" alt="rotating an image in python" width="607" height="214" /></a><br />
-Nota: Hay un modo opcional que nos permite expandir la imagen de salida para hacerla suficientemente grande para que pueda contener a la imagen rotada completa. Se puede activar si se declara como True como parte de los argumentos del método rotar.<br />
+Nota: Hay un modo opcional que nos permite expandir la imagen de salida para hacerla suficientemente grande para que pueda contener a la imagen rotada completa. Se puede activar si se declara como True como parte de los argumentos del método para rotar.<br />
 Como se puede observar en el código anterior, utilizamos una ruta relativa donde se encuentra tanto la imagen como mi código de Python pero también podríamos utilizar una ruta absoluta</li>
 <li><strong>Recortar an Image:</strong> Image.crop(box) toma una 4-tupla de coordenadas de pixeles (izquierda, arriba, derecha, abajo), y regresa una región rectangular de la imagen usada.
 <div class="code-block">
@@ -1078,7 +1078,7 @@ Como se puede observar en el código anterior, utilizamos una ruta relativa dond
 </p></div>
 </p></div>
 <p><a href="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/cropping-an-image-in-python.png"><img class="aligncenter size-full wp-image-158655" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/cropping-an-image-in-python.png" alt="cropping an image in python" width="623" height="225" /></a></li>
-<li><strong>Redimensionar una imagen:</strong> Image.resize(size)- Aqui 'size' se debe proporcionar como una  2-tupla con el ancho y altura deseados.
+<li><strong>Redimensionar una imagen:</strong> Image.resize(size)- Aquí 'size' se debe proporcionar como una  2-tupla con el ancho y altura deseados.
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
@@ -1141,7 +1141,7 @@ Como se puede observar en el código anterior, utilizamos una ruta relativa dond
 </p></div>
 </p></div>
 <p><a href="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/resizing-an-image-in-python.png"><img class="aligncenter size-full wp-image-158657" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/resizing-an-image-in-python.png" alt="resizing an image in python" width="560" height="458" /></a></li>
-<li><strong>Pegar una imagen en otra imagen:</strong> El segundo argumento puede ser una 2-tupla (especificando la esquina superior-izquierda), o una 4-tupla (izquierda, arriba, derecha, abajo) &#8211; en este caso el tamaño (dimensiones) de la imagen pegada deben corresponder al tamaño de esta región o None, que es equivalente a (0, 0).
+<li><strong>Pegar una imagen en otra imagen:</strong> El segundo argumento puede ser una 2-tupla (especificando la esquina superior-izquierda), o una 4-tupla (izquierda, arriba, derecha, abajo) &#8211; en este caso el tamaño (dimensiones) de la imagen pegada debe corresponder al tamaño de esta región o None, que es equivalente a (0, 0).
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
@@ -1210,7 +1210,7 @@ Como se puede observar en el código anterior, utilizamos una ruta relativa dond
 </p></div>
 </p></div>
 <p><a href="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/pasting-an-image-on-other-in-Python.png"><img class="aligncenter size-full wp-image-158662" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/pasting-an-image-on-other-in-Python.png" alt="pasting an image on other in Python" width="754" height="269" /></a></li>
-<li><strong>Obtener el histograma de una imagen:</strong> Esto regresará un histograma de la imagen como una lista de totales de pixeles, uno para cada pixel de la imagen. (El histograma de una imagen es una representación gráfica de la distribución de tonos de una imagen digital. Contiene información sobre todos los valores de brillo en una imagen. Grafica el número de pixeles para cada valor de brillo. Ayuda cuando se hace la configuración de la exposición de imagen. <br />
+<li><strong>Obtener el histograma de una imagen:</strong> Esto regresará un histograma de la imagen como una lista de totales de pixeles, uno para cada pixel de la imagen. (El histograma de una imagen es una representación gráfica de la distribución de tonos de una imagen digital. Contiene información sobre todos los valores de brillo en una imagen. Grafica el número de pixeles para cada valor de brillo. Ayuda cuando se hace la configuración de la exposición de imagen). <br />
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
@@ -1297,7 +1297,7 @@ Como se puede observar en el código anterior, utilizamos una ruta relativa dond
 <tr>
 <td class="code">
 <div class="container">
-<div class="line number1 index0 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">from</code> <code class="plain">PIL </code><code class="keyword">import</code> <code class="plain">Image </code></div>
+<div class="line number1 index0 alt2"><code class="keyword">from</code> <code class="plain">PIL </code><code class="keyword">import</code> <code class="plain">Image </code></div>
 <div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
 <div class="line number3 index2 alt2"><code class="keyword">def</code> <code class="plain">main(): </code></div>
 <div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">try</code><code class="plain">: </code></div>
@@ -1393,7 +1393,7 @@ Como se puede observar en el código anterior, utilizamos una ruta relativa dond
 </p></div>
 </p></div>
 <p><a href="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/split-an-image-in-python.png"><img class="aligncenter size-full wp-image-158673" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/split-an-image-in-python.png" alt="split an image in python" width="765" height="415" /></a></li>
-<li><strong>Convertir a bitmap (tobitmap):</strong> Convierte una imagen a un bitmap X11 (Una formato de imagen binaria de texto plano). Regresa una cadena de caracteres que contiene un bitmap X11, solo puede ser usada con imágenes modo "1", es decir, imágenes en blanco y negro de 1 bit.<br />
+<li><strong>Convertir a bitmap (tobitmap):</strong> Convierte una imagen a un bitmap X11 (Un formato de imagen binaria de texto plano). Regresa una cadena de caracteres que contiene un bitmap X11, solo puede ser usada con imágenes modo "1", es decir, imágenes en blanco y negro de 1 bit.<br />
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
