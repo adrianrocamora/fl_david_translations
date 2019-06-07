@@ -763,7 +763,7 @@ var bsa = document.createElement('script');
 						</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>PIL es la Librería de Imágenes de Python que le brinda la habilidad dee editar imágenes al intérprete de Python. Fue desarrollado por Fredrik Lundh y otros contribuyentes. Pillow es un fork más amigable de PIL y es una librería fácil de usar desarrollada por Alex Clark y otros contribuyentes. En este artículo trabajaremos con Pillow.</p>
+			<p>PIL es la Librería de Imágenes de Python que le brinda la habilidad de editar imágenes al intérprete de Python. Fue desarrollado por Fredrik Lundh y otros contribuyentes. Pillow es un fork más amigable de PIL y es una librería fácil de usar desarrollada por Alex Clark y otros contribuyentes. En este artículo trabajaremos con Pillow.</p>
 <p><strong>Instalación:</strong></p>
 <ul>
 <li><strong>Linux:</strong> En una terminal de Linux escribe lo siguiente:
@@ -784,9 +784,9 @@ var bsa = document.createElement('script');
 <pre>sudo apt-get update
 sudo apt-get install python-pip</pre>
 </li>
-<li><strong>Windows:</strong> <a href="https://pypi.python.org/pypi/Pillow/2.2.1#downloads">Descarga</a> el paquete de Pillow apropiado para tu version de Python. Asegúrate de descargarlo de acuerdo a la versión que estés usando de Python.</li>
+<li><strong>Windows:</strong> <a href="https://pypi.python.org/pypi/Pillow/2.2.1#downloads">Descarga</a> el paquete de Pillow apropiado para tu versión de Python. Asegúrate de descargarlo de acuerdo a la versión que estés usando de Python.</li>
 </ul>
-<p>Estaremos trabajando con el módulo Image que nos proporciona una clase con el mismo nombre con un gran número de funciones paraa trabajar con nuestras imágenes. Para importar el módulo Image, nuestro código debe empezar con la siguiente línea</p>
+<p>Estaremos trabajando con el módulo Image que nos proporciona una clase con el mismo nombre con un gran número de funciones para trabajar con nuestras imágenes. Para importar el módulo Image, nuestro código debe empezar con la siguiente línea</p>
 <pre> from PIL import Image</pre>
 <p><strong>Operaciones con Imágenes:</strong></p>
 <ul>
@@ -1011,9 +1011,9 @@ sudo apt-get install python-pip</pre>
 </p></div>
 </p></div>
 <p><a href="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/rotating-an-image-in-python.png"><img class="aligncenter size-full wp-image-158654" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/rotating-an-image-in-python.png" alt="rotating an image in python" width="607" height="214" /></a><br />
-Nota: Hay un modo opcional que nos permite expandir la imagen de salida para hacerla suficientemente grande para que pueda contener a la imagen rotada completa. Se puede activar si se declara como True coom parte de los argumentos del método rotar.<br />
-Como se puede observar en el codigo anterior, utilizamos una ruta relativa donde se encuentra tanto la imagen como mi codigo de Python pero también podríamos utilizar una ruta absoluta</li>
-<li><strong>Recortar an Image:</strong> Image.crop(box) toma una 4-tupla de coordenadas de pixeles (izquierda, arriba, derecha, abajo), y regresa una region rectangular de la imagen usada.
+Nota: Hay un modo opcional que nos permite expandir la imagen de salida para hacerla suficientemente grande para que pueda contener a la imagen rotada completa. Se puede activar si se declara como True como parte de los argumentos del método rotar.<br />
+Como se puede observar en el código anterior, utilizamos una ruta relativa donde se encuentra tanto la imagen como mi código de Python pero también podríamos utilizar una ruta absoluta</li>
+<li><strong>Recortar an Image:</strong> Image.crop(box) toma una 4-tupla de coordenadas de pixeles (izquierda, arriba, derecha, abajo), y regresa una región rectangular de la imagen usada.
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
@@ -1141,7 +1141,7 @@ Como se puede observar en el codigo anterior, utilizamos una ruta relativa donde
 </p></div>
 </p></div>
 <p><a href="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/resizing-an-image-in-python.png"><img class="aligncenter size-full wp-image-158657" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/resizing-an-image-in-python.png" alt="resizing an image in python" width="560" height="458" /></a></li>
-<li><strong>Pegar una imagen en otra imagen:</strong> El segundo argumento puede ser una 2-tupla (especificando la esquina superior-izquierda), o una 4-tupla (izquierda, arriba, derecha, abajo) &#8211; en este caso el tamaño (dimensiones) de la imagen pegada deben corresponder al tamaño de esta region o None, que es equivalente a (0, 0).
+<li><strong>Pegar una imagen en otra imagen:</strong> El segundo argumento puede ser una 2-tupla (especificando la esquina superior-izquierda), o una 4-tupla (izquierda, arriba, derecha, abajo) &#8211; en este caso el tamaño (dimensiones) de la imagen pegada deben corresponder al tamaño de esta región o None, que es equivalente a (0, 0).
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
@@ -1393,7 +1393,7 @@ Como se puede observar en el codigo anterior, utilizamos una ruta relativa donde
 </p></div>
 </p></div>
 <p><a href="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/split-an-image-in-python.png"><img class="aligncenter size-full wp-image-158673" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/split-an-image-in-python.png" alt="split an image in python" width="765" height="415" /></a></li>
-<li><strong>Convertir a bitmap (tobitmap):</strong> Convierte una imagen a un bitmap X11 (Una formato de imagen binaria de texto plano). Regresa una cadena de caracteres que contiene un bitmap X11, solo puede ser usada con imágenes modo "1", es decir, imagenes en blanco y negro de 1 bit.<br />
+<li><strong>Convertir a bitmap (tobitmap):</strong> Convierte una imagen a un bitmap X11 (Una formato de imagen binaria de texto plano). Regresa una cadena de caracteres que contiene un bitmap X11, solo puede ser usada con imágenes modo "1", es decir, imágenes en blanco y negro de 1 bit.<br />
 <div class="code-block">
 <div class="code-gutter">
 <div class="editor-buttons-container">
